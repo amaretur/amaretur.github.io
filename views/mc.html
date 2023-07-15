@@ -1,0 +1,63 @@
+<div class="project-page">
+
+<a href="#main" class="back"><i class="fa-solid fa-arrow-left-long"></i> На главную</a>
+
+<h3 data-bkg="«Почта»">Почтовый клиент с встроенными функциями криптографической защиты</h3>
+
+<div class="carousel">
+	<img href="https://amaretur.github.io/img/mc/ui1.png" data-fancybox="gallery" src="https://amaretur.github.io/img/mc/ui1.png" alt="Пользовательская форма 1">
+	<img href="https://amaretur.github.io/img/mc/ui2.png" data-fancybox="gallery" src="https://amaretur.github.io/img/mc/ui2.png" alt="Пользовательская форма 2">
+	<img href="https://amaretur.github.io/img/mc/ui3.png" data-fancybox="gallery" src="https://amaretur.github.io/img/mc/ui3.png" alt="Пользовательская форма 3">
+	<img href="https://amaretur.github.io/img/mc/ui4.png" data-fancybox="gallery" src="https://amaretur.github.io/img/mc/ui4.png" alt="Пользовательская форма 4">
+	<img href="https://amaretur.github.io/img/mc/ui5.png" data-fancybox="gallery" src="https://amaretur.github.io/img/mc/ui5.png" alt="Пользовательская форма 5">
+	<img href="https://amaretur.github.io/img/mc/ui6.png" data-fancybox="gallery" src="https://amaretur.github.io/img/mc/ui6.png" alt="Пользовательская форма 6">
+	<img href="https://amaretur.github.io/img/mc/ui7.png" data-fancybox="gallery" src="https://amaretur.github.io/img/mc/ui7.png" alt="Пользовательская форма 7">
+	<img href="https://amaretur.github.io/img/mc/ui8.png" data-fancybox="gallery" src="https://amaretur.github.io/img/mc/ui8.png" alt="Пользовательская форма 8">
+	<img href="https://amaretur.github.io/img/mc/ui9.png" data-fancybox="gallery" src="https://amaretur.github.io/img/mc/ui9.png" alt="Пользовательская форма 9">
+</div>
+
+<h4>Исходный код</h4>
+<p>Cерверная часть приложения: <a target="_blank" href="https://github.com/amaretur/mail-client">github.com/amaretur/mail-client</a>.</p>
+<p>Клиентская часть приложения: <a target="_blank" href="https://github.com/amaretur/mail-client-website">github.com/amaretur/mail-client-website</a>.</p>
+
+<h4>Стек технологий</h4>
+<div class="set">
+	<p>Go</p>
+	<p>SQL</p>
+	<p>PostgreSQL</p>
+	<p>HTML</p>
+	<p>CSS</p>
+	<p>JavaScript</p>
+	<p>JWT</p>
+</div>
+
+<div class="hidden hide" data-preview="Подробное описание проекта...">
+
+<h4>Общая структура приложения</h4>
+
+<p>Система построена на основе <span class="keyword">клиент-серверной архитектуры</span>.</p>
+<p>Приложение реализует базовю функциональность почтового клиента, взаимодействуя с почтовыми серверами по протоколам <span class="keyword">IMAP</span> и <span class="keyword">SMTP</span>.</p>
+
+<img href="https://amaretur.github.io/img/mc/struct.png" data-fancybox src="https://amaretur.github.io/img/mc/struct.png" alt="Примерная схема архитектуры системы">
+
+<p>Диаграмма взаимодействия компонентов в системе:</p>
+
+<img href="https://amaretur.github.io/img/mc/struct2.png" data-fancybox src="https://amaretur.github.io/img/mc/struct2.png" alt="Взаимодействие компонентов системы">
+
+<p>Пакет «scipher» реализует основные алгоритмы потокового шифрования данных на основе различных «модов», в частности - «CBC». Для этого пакета были разработаны табличные <span class="keyword">unit-тесты</span>.</p>
+<p>Пакет «cipher» предоставляет готовые функции шифрования и дешифрования писем на основе протоколов <span class="keyword">TripleDES</span> и <span class="keyword">RSA</span>, используя пакет «scipher». Для этого пакета также было разработано несколько <span class="keyword">unit-тестов</span>.</p>
+
+<h4>Реализованный функционал системы</h4>
+
+<p>HTTP API приложения:</p>
+
+<img href="https://amaretur.github.io/img/mc/api.png" data-fancybox src="https://amaretur.github.io/img/mc/api.png" alt="API приложения">
+
+</div>
+
+<script>
+	init_hidden_widgets();
+	Fancybox.bind("[data-fancybox]", {});
+</script>
+
+

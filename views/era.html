@@ -1,0 +1,114 @@
+
+<div class="project-page">
+
+<a href="#main" class="back"><i class="fa-solid fa-arrow-left-long"></i> На главную</a>
+
+<h3 data-bkg="«Эра»" >Система управления образовательным процессом «Эра»</h3>
+
+<div class="carousel">
+
+	<img href="https://amaretur.github.io/img/era/ui1.png" data-fancybox="gallery" src="https://amaretur.github.io/img/era/ui1.png" alt="Пользовательская форма 1">
+	<img href="https://amaretur.github.io/img/era/ui2.png" data-fancybox="gallery" src="https://amaretur.github.io/img/era/ui2.png" alt="Пользовательская форма 2">
+	<img href="https://amaretur.github.io/img/era/ui3.png" data-fancybox="gallery" src="https://amaretur.github.io/img/era/ui3.png" alt="Пользовательская форма 3">
+	<img href="https://amaretur.github.io/img/era/ui4.png" data-fancybox="gallery" src="https://amaretur.github.io/img/era/ui4.png" alt="Пользовательская форма 4">
+	<img href="https://amaretur.github.io/img/era/ui5.png" data-fancybox="gallery" src="https://amaretur.github.io/img/era/ui5.png" alt="Пользовательская форма 5">
+	<img href="https://amaretur.github.io/img/era/ui6.png" data-fancybox="gallery" src="https://amaretur.github.io/img/era/ui6.png" alt="Пользовательская форма 6">
+	<img href="https://amaretur.github.io/img/era/ui7.png" data-fancybox="gallery" src="https://amaretur.github.io/img/era/ui7.png" alt="Пользовательская форма 7">
+
+</div>
+
+<h4>Стек технологий</h4>
+
+<img href="https://amaretur.github.io/img/era/stack.png" data-fancybox src="https://amaretur.github.io/img/era/stack.png" alt="Стек технологий">
+
+<h4>Что было сделано?</h4>
+
+<img href="https://amaretur.github.io/img/era/results.png" data-fancybox src="https://amaretur.github.io/img/era/results.png" alt="Итоги">
+
+<div class="hidden hide" data-preview="Подробное описание проекта...">
+
+<h4>Общая архитектура системы</h4>
+
+<p>Система построена на основе <span class="keyword">микросервисной архитектуры</span>. Она содержит в себе 8 микросервисов. На данном этапе, полностью реализовано только 5, из которых <span class="keyword">3 было реализовано мной</span>.</p>
+
+<img href="https://amaretur.github.io/img/era/arch.png" data-fancybox src="https://amaretur.github.io/img/era/arch.png" alt="Примерная схема архитектуры системы">
+
+<h4>Архитектура микросервиса</h4>
+
+<p>Проектирование архитектуры каждого их микросервисов производилось на основе архитектурного подхода <span class="keyword">«Clean Architecture».</span></p>
+
+<div class="hidden hide" data-preview="Показать типовую архитектуру микросервисов системы">
+	<img href="https://amaretur.github.io/img/era/arch-microservice.png" data-fancybox src="https://amaretur.github.io/img/era/arch-microservice.png" alt="Примерная схема архитектуры микросервиса">
+</div>
+
+<h4>Микросервис «Авторизация»</h4>
+
+<p>Этот микросервис отвечает за авторизацию всех пользователей в системе. Авторизация построена на основе <span class="keyword">JWT</span> токенов.</p> 
+<p>Микросервис имеет две конечные точки: для авторизации и получения авторизационных токенов, и для обновления этих токенов.</p>
+<div class="hidden hide" data-preview="Показать схему HTTP API микросервиса «Авторизация»">
+	<img src="https://amaretur.github.io/img/era/auth-http-api.png" href="https://amaretur.github.io/img/era/auth-http-api.png" data-fancybox alt="Схема HTTP API микросервиса 'Авторизация'">
+</div>
+
+<p>Для формирования токенов, <span class="keyword">микросервис производит обращения</span> к микросервисам «Пользователи», «ВУЗ» по протоколу <span class="keyword">gRPC</span>.</p>
+
+<h4>Микросервис «Пользователи»</h4>
+
+<p>Микросервис «Пользователи» выполняет функции хранения информации о всех пользователях в системе.</p>
+<img href="https://amaretur.github.io/img/era/users-preview.png" data-fancybox src="https://amaretur.github.io/img/era/users-preview.png" alt="Микросервис «Пользователи»">
+<p>Было реализовано <span class="keyword">5 типов пользователей</span>: студент, преподаватель, диспетчер факультета, администратор ВУЗа и суперпользователь.</p>
+<p>Для некоторых действий в системе были <span class="keyword">реализованы функции подтверждения действий средствами отправки токенов подтверждения на электронную почту</span>.</p>
+<p>Для хранения токенов использовалось хранилище <span class="keyword">Redis</span>, а их отправка производилась по протоколу <span class="keyword">SMTP</span>.</p>
+
+<div class="hidden hide"data-preview="Показать схему БД микросервиса «Пользователи»">
+	<img href="https://amaretur.github.io/img/era/users-db.png" data-fancybox src="https://amaretur.github.io/img/era/users-db.png" alt="Схема БД микросервивса «Пользователи»">
+</div>
+
+<div class="hidden hide" data-preview="Показать схему HTTP API микросервиса «Пользователи»">
+	<img href="https://amaretur.github.io/img/era/users-http-api.png" data-fancybox src="https://amaretur.github.io/img/era/users-http-api.png" alt="Схема HTTP API микросервивса «Пользователи»">
+</div>
+
+<h4>Микросервис «Курсы»</h4>
+<p>Микросервис курсы служит для организации образовательных курсов.</p>
+<img href="https://amaretur.github.io/img/era/courses-preview.png" data-fancybox src="https://amaretur.github.io/img/era/courses-preview.png" alt="Микросервис «Курсы»">
+
+<div class="hidden hide" data-preview="Показать схему БД микросервиса «Курсы»">
+	<img href="https://amaretur.github.io/img/era/courses-db.png" data-fancybox src="https://amaretur.github.io/img/era/courses-db.png" alt="Схема БД микросервивса «Курсы»">
+</div>
+
+<div class="hidden hide" data-preview="Показать схему HTTP API микросервиса «Курсы»">
+	<img href="https://amaretur.github.io/img/era/courses-http-api.png" data-fancybox src="https://amaretur.github.io/img/era/courses-http-api.png" alt="Схема HTTP API микросервивса «Курсы»">
+</div>
+
+<h4>API шлюз</h4>
+
+<p>В рамках данного проекта, также был реализован <span class="keyword">API шлюз</span>, который отвечает за <span class="keyword">маршрутизацию запосов</span> к микросервисам и <span class="keyword">валидацию авторизационных токенов</span>.</p>
+<div class="hidden hide" data-preview="Показать примерную схему работы API шлюза">
+	<img href="https://amaretur.github.io/img/era/api-geteway.png" data-fancybox src="https://amaretur.github.io/img/era/api-geteway.png" alt="Примерная схема работы API шлюза">
+</div>
+
+<h4>Библиотека «gcobs»</h4>
+<p>Библиотека «gcobs» решает проблему непредвиденных разрывов соединений между микросервисами. В ее задачи входит наблюдение за соединением и воспроизведение попыток восстановить соединение.</p>
+
+<p>Исходный код библиотеки: <a target="_blank" href="https://gitflic.ru/project/education/gcobs" >gitflic.ru/project/education/gcobs</a>.</p>
+
+<div class="hidden hide" data-preview="Показать диаграмму класса «Observer»">
+	<img href="https://amaretur.github.io/img/era/gcobs.png" data-fancybox src="https://amaretur.github.io/img/era/gcobs.png" alt="Диаграмма класса Observer">
+</div>
+
+<h4>Библиотека «errors»</h4>
+<p>Простая библиотека для создания типов ошибок и взаимодействия с ними.</p>
+<p>Библиотека позволяет «вкладывать» ошибки друг в друга, проверять тип ошибки и наличие ошибки определенного типа в стеке ошибок.</p>
+<p>Для некоторых функций библиотеки были написаны табличные <span class="keyword">unit-тесты</span>.</p>
+<p>Исходный код библиотеки: <a target="_blank" href="https://gitflic.ru/project/education/errors">gitflic.ru/project/education/errors</a>.</p>
+
+
+
+</div>
+
+<script>
+	init_hidden_widgets();
+	Fancybox.bind("[data-fancybox]", {});
+</script>
+
+
+
